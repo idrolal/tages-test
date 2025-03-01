@@ -1,5 +1,5 @@
 <template>
-  <link rel="stylesheet" :href="`/themes/theme.${theme}.css`" />
+  <link rel="stylesheet" :href="href" />
 
   <div class="layout">
     <BreadCrumbs />
@@ -8,12 +8,17 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useGlobalStore } from '@/store/globalStore';
 import { storeToRefs } from 'pinia';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
 const globalStore = useGlobalStore();
 const { theme } = storeToRefs(globalStore);
+
+const href = computed(
+  () => `${import.meta.env.VITE_BASE_URL}/themes/theme.${theme.value}.css`
+);
 </script>
 
 <style lang="scss" scoped>
