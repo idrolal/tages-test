@@ -1,6 +1,10 @@
 <template>
   <ul class="breadcrumbs">
-    <li v-for="item in breadcrumbs" :key="item.name" class="breadcrumbs__item">
+    <li
+      v-for="item in breadcrumbs"
+      :key="item.to.name"
+      class="breadcrumbs__item"
+    >
       <RouterLink
         :to="item.to"
         :class="`breadcrumbs__link ${
@@ -15,15 +19,16 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import type { InterfaceMeta } from '@/router/categories';
 
 const route = useRoute();
 
 const breadcrumbs = computed(() => {
   const { meta } = route;
-  return meta.breadcrumb?.map((item) => {
+  return (meta as InterfaceMeta).breadcrumb?.map((item) => {
     const router = {
       label: item.label,
-      to: { name: item.name },
+      to: { name: item.name, params: {} },
     };
 
     if (typeof item.params === 'function') {
@@ -44,7 +49,6 @@ const breadcrumbs = computed(() => {
   flex-wrap: wrap;
   gap: 8px;
   list-style: none;
-  
 
   .breadcrumbs__item {
     font-weight: 400;

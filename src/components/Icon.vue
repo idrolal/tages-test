@@ -1,8 +1,8 @@
 <template>
   <svg
-    :width="props.size ? props.size[0] : null"
-    :height="props.size ? props.size[1] : null"
-    :fill="props.color ? props.color : null"
+    :width="props.size && props.size[0]"
+    :height="props.size && props.size[1]"
+    :fill="props.color && props.color"
   >
     <title v-if="props.title">{{ props.title }}</title>
     <use :href="url"></use>
@@ -25,5 +25,4 @@ const props = withDefaults(defineProps<Props>(), {
 const url = computed(() => `/images/svg/sprites.svg#${props.icon}`);
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

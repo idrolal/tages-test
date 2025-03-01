@@ -93,7 +93,7 @@ const data = reactive<Data>({
   cart: {},
 });
 
-const setFavorites = (id) => {
+const setFavorites = (id: CategoryItem['id']) => {
   data.favorites[id] = !data.favorites[id];
   localStorage.setItem(
     `${props.name}-favorites`,
@@ -101,15 +101,16 @@ const setFavorites = (id) => {
   );
 };
 
-const setCart = (id) => {
+const setCart = (id: CategoryItem['id']) => {
   data.cart[id] = !data.cart[id];
   localStorage.setItem(`${props.name}-cart`, JSON.stringify(data.cart));
 };
 
 onBeforeMount(() => {
-  data.favorites =
-    JSON.parse(localStorage.getItem(`${props.name}-favorites`)) || {};
-  data.cart = JSON.parse(localStorage.getItem(`${props.name}-cart`)) || {};
+  data.favorites = JSON.parse(
+    localStorage.getItem(`${props.name}-favorites`) || `{}`
+  );
+  data.cart = JSON.parse(localStorage.getItem(`${props.name}-cart`) || `{}`);
 });
 </script>
 

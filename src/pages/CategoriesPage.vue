@@ -18,10 +18,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterName } from '@/router/routesName';
-import { useRoute } from 'vue-router';
 import CardItem from '@/components/CardItem.vue';
 
-const route = useRoute();
 const categories = ref([
   {
     name: 'Комплекты стеллажных систем',

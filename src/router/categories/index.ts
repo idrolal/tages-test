@@ -1,8 +1,8 @@
 import { RouterName } from '../routesName';
 
-import { type RouteLocationNormalizedLoadedGeneric } from 'vue-router';
+import { type RouteLocationNormalizedLoadedGeneric, type RouteMeta } from 'vue-router';
 
-interface InterfaceMeta {
+export interface InterfaceMeta extends RouteMeta {
   breadcrumb: {
     name: RouterName;
     label: string | ((route: RouteLocationNormalizedLoadedGeneric) => string);
@@ -25,7 +25,7 @@ const getParams = (
   route: RouteLocationNormalizedLoadedGeneric,
   keys: string[]
 ) => {
-  return keys.reduce((acc, key) => {
+  return keys.reduce((acc:  Record<string, string | string[]>, key) => {
     acc[key] = route.params[key];
     return acc;
   }, {});

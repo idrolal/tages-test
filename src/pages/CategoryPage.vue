@@ -25,7 +25,7 @@
     <CategoryCard
       :categoryItems="categories"
       :loading="data.loading"
-      :name="route.params.name"
+      :name="(route.params.name as string)"
     />
   </section>
 </template>
@@ -83,12 +83,13 @@ const categories = computed(() => {
       if (data.sort === 'desc') {
         return b.price.current_price - a.price.current_price;
       }
+      return 0;
     });
 });
 
 onMounted(async () => {
   await getMaterials();
-  await getCategoryItems(route.params.name);
+  await getCategoryItems(route.params.name as string);
   data.loading = false;
 });
 </script>

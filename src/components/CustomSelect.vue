@@ -5,27 +5,28 @@
     </label>
 
     <div class="select-wrapper">
-      <p class="select-placeholder" v-if="!model">{{ props.placeholder }}</p>
+      <p class="select-placeholder" v-if="!model">{{ placeholder }}</p>
 
       <select v-model="model">
         <option
-          v-for="(item, idx) in props.items"
+          v-for="(item, idx) in items"
           :key="idx"
-          :value="item[props.optionsKey]"
+          :value="item[optionsKey]"
         >
-          {{ item[props.optionsLabel] }}
+          {{ item[optionsLabel] }}
         </option>
       </select>
-      <p class="select-close" v-if="props.clearble" @click="clear">×</p>
+      <p class="select-close" v-if="clearble" @click="clear">×</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-interface Props<T extends object> {
-  items: T[];
-  optionsKey: keyof T;
-  optionsLabel: keyof T;
+
+interface Props {
+  items: any[];
+  optionsKey: string;
+  optionsLabel: string;
   label?: string;
   placeholder: string;
   clearble?: boolean;
@@ -35,6 +36,8 @@ const props = withDefaults(defineProps<Props>(), {
   items: () => [],
   optionsKey: 'id',
   clearble: true,
+  label: '',
+  placeholder: ''
 });
 
 const model = defineModel();
