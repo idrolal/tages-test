@@ -8,7 +8,7 @@
       "current_price": 355
     },
     "image": {
-      "url": "/images/door_handle.png"
+      "url": "/tages-test/images/door_handle.png"
     },
     "material": 1
   },
@@ -21,7 +21,7 @@
       "current_price": 355.555
     },
     "image": {
-      "url": "/images/stainless_steel.png"
+      "url": "/tages-test/images/stainless_steel.png"
     },
     "material": 2
   },
@@ -34,7 +34,7 @@
       "current_price": 75
     },
     "image": {
-      "url": "/images/standard_hinges.png"
+      "url": "/tages-test/images/standard_hinges.png"
     },
     "material": 2
   },
@@ -47,7 +47,7 @@
       "current_price": 200
     },
     "image": {
-      "url": "/images/loop_with_stopper.png"
+      "url": "/tages-test/images/loop_with_stopper.png"
     },
     "material": 2
   },
@@ -60,7 +60,7 @@
       "current_price": 720
     },
     "image": {
-      "url": "/images/door_handle.png"
+      "url": "/tages-test/images/door_handle.png"
     },
     "material": 1
   },
@@ -73,7 +73,7 @@
       "current_price": 355.555
     },
     "image": {
-      "url": "/images/stainless_steel.png"
+      "url": "/tages-test/images/stainless_steel.png"
     },
     "material": 2
   },
@@ -86,7 +86,7 @@
       "current_price": 75
     },
     "image": {
-      "url": "/images/standard_hinges.png"
+      "url": "/tages-test/images/standard_hinges.png"
     },
     "material": 2
   },
@@ -99,7 +99,7 @@
       "current_price": 900
     },
     "image": {
-      "url": "/images/loop_with_stopper.png"
+      "url": "/tages-test/images/loop_with_stopper.png"
     },
     "material": 2
   }
