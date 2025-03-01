@@ -1,0 +1,42 @@
+:root {
+  // font
+  --font-family: 'SF UI Text', sans-serif;
+
+  // white
+  --white-100: #ffffff;
+  --white-200: #F2F2F2;
+
+  // black
+  --black-100: #eeeeee;
+  --black-500: #888888;
+  --black-600: #727783;
+  --black-700: #4f4f4f;
+  --black-900: #000000;
+
+  // orange
+  --orange-500: #eb5757;
+
+  // green
+  --green-500: #27ae60;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
