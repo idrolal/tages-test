@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
   
   const config = {
-    base: 'test-tages',
+    base: 'tages-test',
     plugins: [vue()],
     server: {
       port: 3000,
