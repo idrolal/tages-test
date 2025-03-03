@@ -22,7 +22,9 @@ const props = withDefaults(defineProps<Props>(), {
   size: () => ['1em', '1em'],
 });
 
-const url = computed(() => `/images/svg/sprites.svg#${props.icon}`);
+const url = computed(
+  () => `${import.meta.env.VITE_BASE_URL}/images/svg/sprites.svg#${props.icon}`
+);
 </script>
 
 <style lang="scss" scoped></style>
