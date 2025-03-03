@@ -1,0 +1,15 @@
+:root {
+	--main-bg-color: var(--white-100);
+	--breadcrumbs-text-color: var(--black-600);
+	--breadcrumbs-text-color-active: var(--black-900);
+	--border-color-card: var(--black-100);
+	--light-text-color: var(--black-500);
+	--main-text-color: var(--black-900);
+	--sale-bg-color: var(--orange-500);
+	--sale-text-color: var(--white-100);
+	--icon-in-cart-color: var(--green-500);
+	--icon-favorite-color: var(--orange-500);
+	--input-label-color: var(--black-700);
+	--input-color: var(--black-900);
+	--input-bg-color: var(--white-200);
+}
